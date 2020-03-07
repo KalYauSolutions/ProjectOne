@@ -9,83 +9,91 @@ public class TravProf {
     String paymentType;
     MedCond medCondInfo;
 
-    public TravProf(String a, String b, String c, String d, String e, float f, String g, String h, medConInfo i) {
-        travAgentID = a;
-        firstName = b;
-        lastName = c;
-        address = d;
-        phone = e;
-        tripCost = f;
-        travelType = g;
-        paymentType = h;
-        medCondInfo = i;
+    public TravProf(String ID, String first, String last, String address, String phone, float cost, String travType,
+                    String payType, medConInfo medInfo) {
+        travAgentID = ID;
+        firstName = first;
+        lastName = last;
+        address = address;
+        phone = phone;
+        tripCost = cost;
+        travelType = travType;
+        paymentType = payType;
+        medCondInfo = medInfo;
     }
 
-    static String gettravAgentID() {
+    public String gettravAgentID() {
         return travAgentId;
     }
 
-    static String getFirstName() {
+    public String getFirstName() {
         return firstName;
     }
 
-    static String getLastName() {
+    public String getLastName() {
         return lastName;
     }
 
-    static String getAddress(){
+    public String getAddress(){
         return address;
     }
 
-    static String getPhone(){
+    public String getPhone(){
         return phone;
     }
 
-    static float getTripCost(){
+    public float getTripCost(){
         return tripCost;
     }
 
-    static String getTravelType(){
+    public String getTravelType(){
         return travelType;
     }
 
-    static String getPaymentType(){
+    public String getPaymentType(){
         return paymentType;
     }
 
-    static MedCond getMedCondInfo(){
+    public MedCond getMedCondInfo(){
         return medCondInfo;
     }
 
-    static void updateFirstName(String newFname){
+    public void updateFirstName(String newFname){
         firstName = newFname;
     }
 
-    static void updateLastName(String newLname){
+    public void updateLastName(String newLname){
         lastName = newLname;
     }
 
-    static void updateAddress(String newAddress){
+    public void updateAddress(String newAddress){
         address = newAddress;
     }
 
-    static void updatePhone(String newPhone){
+    public void updatePhone(String newPhone){
         phone = newPhone;
     }
 
-    static void updateTripCost(float newCost){
+    public void updateTripCost(float newCost){
         tripCost = newCost;
     }
 
-    static void updateTravelType(String newTType){
+    public void updateTravelType(String newTType){
         travelType = newTType;
     }
 
-    static void updatePaymentType(String newPType){
+    public void updatePaymentType(String newPType){
         paymentType = newPType;
     }
 
-    static void updateMedCondInfo(MedCond newMedInfo) {
+    public void updateMedCondInfo(MedCond newMedInfo) {
         medCondInfo = newMedInfo;
+    }
+    public static void main(String[] args){
+        MedCond t1med = new MedCond();
+        TravProf t1 = new TravProf("123", "austin", "nolfi", "WoodHaven", "911",
+                "$1", "business", "cash", t1med);
+
+        System.out.print(gettravAgentID());
     }
 }
