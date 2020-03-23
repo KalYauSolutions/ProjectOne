@@ -1,8 +1,11 @@
+package src.travelProfilePackage;
+
 public class MedCond {
     String mdContact;
     String mdPhone;
     String algType;
     String illType;
+
     public MedCond(String physician, String medNum, String allergies, String illness){
         mdContact = physician;
         mdPhone = medNum;
@@ -33,5 +36,6 @@ public class MedCond {
     public void updateIllType(String newIllType){
         illType = newIllType;
     }
-
+    public static void main(String[] args){
+    }
 }
