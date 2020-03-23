@@ -1,3 +1,5 @@
+package src.travelProfilePackage;
+
 public class TravProf {
     String travAgentID;
     String firstName;
@@ -10,20 +12,20 @@ public class TravProf {
     MedCond medCondInfo;
 
     public TravProf(String ID, String first, String last, String address, String phone, float cost, String travType,
-                    String payType, medConInfo medInfo) {
-        travAgentID = ID;
-        firstName = first;
-        lastName = last;
-        address = address;
-        phone = phone;
-        tripCost = cost;
-        travelType = travType;
-        paymentType = payType;
-        medCondInfo = medInfo;
+                    String payType, MedCond medInfo) {
+        this.travAgentID = ID;
+        this.firstName = first;
+        this.lastName = last;
+        this.address = address;
+        this.phone = phone;
+        this.tripCost = cost;
+        this.travelType = travType;
+        this.paymentType = payType;
+        this.medCondInfo = medInfo;
     }
 
     public String gettravAgentID() {
-        return travAgentId;
+        return travAgentID;
     }
 
     public String getFirstName() {
@@ -90,10 +92,17 @@ public class TravProf {
         medCondInfo = newMedInfo;
     }
     public static void main(String[] args){
-        MedCond t1med = new MedCond();
-        TravProf t1 = new TravProf("123", "austin", "nolfi", "WoodHaven", "911",
-                "$1", "business", "cash", t1med);
-
-        System.out.print(gettravAgentID());
+        MedCond traveler1med = new MedCond("cum", "fuck", "shit", "a$$");
+        TravProf traveler1 = new TravProf("123", 
+                                          "austin", 
+                                          "nolfi", 
+                                          "WoodHaven", 
+                                          "911", 
+                                          1.02f, 
+                                          "Business", 
+                                          "Cash", 
+                                          traveler1med);
+        System.out.println("FIRST:" + traveler1.getFirstName());
+        System.out.println("LAST:" + traveler1.getLastName());
     }
 }
