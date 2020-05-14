@@ -2,7 +2,7 @@
 
 Included are the files necessary to run a rudimentary file management system, with an included interface.
 
-Compressed into a zip file for ease of download, there are 4 methods that have been created, now usable via a Graphical User Interface.
+Compressed into a zip file for ease of download, there are 4 methods that have been created, now usable via a Graphical User Interface as a .jar file.
 
 MedCond: A method that handles the code necessary to hold a myriad of traveler's medical condition info. Allergy information, primary care contact, any special conditions like weak heart, that sort of thing. 
 
